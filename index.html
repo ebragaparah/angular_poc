@@ -3,15 +3,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
         <script src="app.js"></script>
         <script src="main/main.controller.js"></script>
+        <script src="main/main-model.factory.js"></script>
         <script src="first/first.controller.js"></script>
+        <script src="first/first-model.factory.js"></script>
     </head>
     <body>
         <div ng-app="pocApp">
             <div ng-controller="MainCtrl as main">
-                {{ main.data }}
+                {{ main.name }}
             </div>
             <div ng-controller="FirstCtrl as first">
-                {{ first.data }}
+                {{ first.name }}
             </div>
         </div>
     </body>

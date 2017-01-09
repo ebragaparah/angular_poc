@@ -3,9 +3,9 @@
 angular.module('pocApp')
 .controller('MainCtrl', MainCtrl);
 
-MainCtrl.$inject = ['$scope'];
+MainCtrl.$inject = ['$scope', 'MainModel'];
 
-function MainCtrl($scope) {
+function MainCtrl($scope, MainModel) {
   var vm = this;
-  vm.data = 'main ctrl';
+  vm.name = MainModel.name;
 }
