@@ -2,28 +2,16 @@
     <head>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
         <script src="app.js"></script>
+        <script src="main.controller.js"></script>
+        <script src="first.controller.js"></script>
     </head>
     <body>
-        <div ng-app="foobar">
+        <div ng-app="pocApp">
             <div ng-controller="MainCtrl as main">
-                <p><button ng-click="broadcastMainMsg()">clickme</button></p>
-                {{ main.msgFromSecondCtrl }}
-                <div ng-controller="FirstCtrl as first">
-                    {{ first.data }}
-                    {{ first.msgFromSecondCtrl }}
-                    <div ng-controller="SecondCtrl as second">
-                        {{ second.data }}
-                    </div>
-                    <div ng-controller="ThirdCtrl as third">
-                        {{ third.data }}
-                    </div>
-                </div>
-
-                <div ng-controller="FourthCtrl as fourth">
-                    {{ fourth.data }}
-                    {{ fourth.messageThatComesFromTheSecondCtrl }}
-                    <!-- nada acotece feijoada -->
-                </div>
+                {{ main.data }}
+            </div>
+            <div ng-controller="FirstCtrl as first">
+                {{ first.data }}
             </div>
         </div>
     </body>
