@@ -6,8 +6,10 @@
         <script src="main/main-model.factory.js"></script>
         <script src="first/first.controller.js"></script>
         <script src="first/first-model.factory.js"></script>
+        <script src="application.js"></script>
     </head>
     <body>
+      <div id="application"></div>
         <div ng-app="pocApp">
             <div ng-controller="MainCtrl as main">
                 {{ main.name }}
@@ -17,4 +19,8 @@
             </div>
         </div>
     </body>
+    <script>
+        var div = document.getElementById('application');
+        Elm.Main.embed(div);
+    </script>
 </html>
